@@ -1,0 +1,241 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600&display=swap');
+
+:root {
+    --rose-100: #fff3f0;
+    --rose-200: #ffd9d2;
+    --rose-300: #f5b8ab;
+    --rose-500: #c86f5f;
+    --wine-700: #5d2c2c;
+    --text-700: #523737;
+    --surface: rgba(255, 255, 255, 0.78);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Manrope", sans-serif;
+    color: var(--text-700);
+    background: url('EeK.jpg');
+    
+    padding: 28px 14px;
+}
+
+.moments-page {
+    max-width: 980px;
+    margin: 0 auto;
+    background: var(--surface);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: 24px;
+    padding: 28px 18px;
+    backdrop-filter: blur(6px);
+    box-shadow: 5px 14px 40px rgba(0, 0, 0, 0.432);
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+.hero h1 {
+    font-family: "Fraunces", serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    color: var(--wine-700);
+    margin-bottom: 8px;
+}
+
+.hero p {
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.moments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.moment-card {
+    background: linear-gradient(180deg, #ffffff 0%, #fff6f3 100%);
+    border: 1px solid #f7d3ca;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 7px 16px rgba(170, 92, 72, 0.12);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.moment-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(170, 92, 72, 0.18);
+}
+
+.tag {
+    display: inline-block;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8d4c43;
+    background: #ffe4de;
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.moment-card h2 {
+    font-family: "Fraunces", serif;
+    color: #683333;
+    margin-bottom: 8px;
+    font-size: 1.28rem;
+}
+
+.moment-card ul {
+    list-style: none;
+    display: grid;
+    gap: 7px;
+}
+
+.moment-card li {
+    line-height: 1.45;
+    padding-left: 14px;
+    position: relative;
+}
+
+.moment-card li::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--rose-500);
+    position: absolute;
+    left: 0;
+    top: 9px;
+}
+
+.album {
+    background: linear-gradient(180deg, #fffaf8 0%, #fff3ef 100%);
+    border: 1px solid #f3d3cb;
+    border-radius: 16px;
+    padding: 18px;
+    margin-bottom: 22px;
+}
+
+.album h2 {
+    font-family: "Fraunces", serif;
+    color: var(--wine-700);
+    margin-bottom: 5px;
+}
+
+.album-subtitle {
+    margin-bottom: 14px;
+    font-size: 0.95rem;
+    color: #7a5454;
+}
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+}
+
+.album-item {
+    background: #fff;
+    border: 1px solid #f7dcd5;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.album-date {
+    font-size: 0.76rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a06161;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.album-item h3 {
+    color: #704040;
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+.album-item p {
+    line-height: 1.45;
+    font-size: 0.94rem;
+}
+
+.message {
+    text-align: center;
+    margin-bottom: 22px;
+    background: #fff;
+    border: 1px dashed #e5b4a7;
+    border-radius: 14px;
+    padding: 16px;
+}
+
+.message h2 {
+    font-family: "Fraunces", serif;
+    color: var(--wine-700);
+    margin-bottom: 6px;
+}
+
+.message p {
+    max-width: 760px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.page-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.page-links a {
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(90deg, #c17261 0%, #a95050 100%);
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: filter 0.2s ease;
+}
+
+.page-links a:hover {
+    filter: brightness(1.08);
+}
+
+@media (max-width: 640px) {
+    .moments-page {
+        padding: 22px 14px;
+    }
+
+    .moment-card h2 {
+        font-size: 1.18rem;
+    }
+}
+
+.photo-frame {
+    background: #fff;
+    border: 1px solid #f2d6cf;
+    border-radius: 12px;
+    padding: 7px;
+    margin-bottom: 10px;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+    border-radius: 9px;
+}
